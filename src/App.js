@@ -1,25 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Left from './components/Assides/Left';
+import Right from './components/Assides/Right';
+import Main from './components/Main/Main';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App =()=>{
+
+  const tasks =[
+    {
+      title: "Going Work",
+      date: '2022-01-01',
+      category: "Work",
+      status: "in Progress",
+    },
+    {
+      title: "Learning Bottcamp",
+      date: '2022-02-01',
+      category: "Learning",
+      status: "Complete",
+    }
+  ]
+
+
+  
+   return (
+    <div className='flex min-h-screen w-screen bg-gray-100'>
+
+     <Left/>
+     <Main tasks={tasks}/>
+     <Right/>
+    
+     
     </div>
   );
+
 }
 
 export default App;
